@@ -16,6 +16,9 @@ public class MainMenu : MonoBehaviour
     [Header("CanvasGroup меню-заставки")]
     [SerializeField] private CanvasGroup screenPanelCanvasGroup;
 
+    [Header("CanvasGroup меню игры (синглплеер или мульти)")]
+    [SerializeField] private CanvasGroup gamePanelCanvasGroup;
+
     private float waitIntervalCoeff = 2;
 
     private void Awake()
@@ -23,6 +26,7 @@ public class MainMenu : MonoBehaviour
         SetCanvasGroup(screenPanelCanvasGroup, 1, true, true);
         SetCanvasGroup(mainPanelCanvasGroup, 0, false, false);
         SetCanvasGroup(tutorialPanelCanvasGroup, 0, false, false);
+        SetCanvasGroup(gamePanelCanvasGroup, 0, false, false);
 
         StartCoroutine(SetScreenAlpha());
     }
@@ -46,10 +50,16 @@ public class MainMenu : MonoBehaviour
         SetCanvasGroup(tutorialPanelCanvasGroup, 1, true, true);
     }
 
+    public void GoToGameMenu()
+    {
+        SetCanvasGroup(mainPanelCanvasGroup, 0, false, false);
+        SetCanvasGroup(gamePanelCanvasGroup, 1, true, true);
+    }
+
     public void ExitGame()
     {
         Application.Quit();
-    }
+    }    
 
     public void LoadFirstLevel()
     {

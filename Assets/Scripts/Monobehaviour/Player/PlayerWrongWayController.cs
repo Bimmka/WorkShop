@@ -78,20 +78,6 @@ public class PlayerWrongWayController : MonoBehaviour, IWrongWay
         playerRigidbody.angularVelocity = 0f;
     }
 
-    private float TryToSpawnPlayerWithRotation()
-    {
-        bool isRightWay = false;
-        float angle = 0f;
-        while (!isRightWay)
-        {
-            isRightWay = IsPlayerOnWrongWay(transform.right, mapCenterPosition - transform.position);
-            angle += Vector2.SignedAngle(transform.up, mapCenterPosition - transform.position);
-            Debug.LogWarning($"{angle}");
-            transform.DORotate(transform.eulerAngles + Quaternion.AngleAxis(angle, Vector3.forward).eulerAngles, 0f);
-        }
-        return angle;
-    }
-
     /// <summary>
     /// Если игрок смог сам повернуть
     /// </summary>

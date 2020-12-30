@@ -122,11 +122,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6985186368947305075}
   - component: {fileID: 6985186368947305073}
-  - component: {fileID: 7720815791060991214}
-  - component: {fileID: 6985186368947305072}
   - component: {fileID: 3755820009111368798}
-  - component: {fileID: 4410862961686931200}
   - component: {fileID: 7017184885279186735}
+  - component: {fileID: 4281561784535421999}
+  - component: {fileID: 3142492656906716945}
+  - component: {fileID: 4410862961686931200}
   - component: {fileID: -7745217921363958337}
   - component: {fileID: 3881696836394778797}
   - component: {fileID: 4846945510829269606}
@@ -175,42 +175,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7720815791060991214
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6985186368947305074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae217f9ee85099448b1b47561d8495cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombSpawn: {fileID: 1490587991616869815}
-  maxEnergy: 100
-  wasteEnergy: 2
-  bombSetEnergy: 0.1
-  keyCodeBomb: 274
-  setBombSound: {fileID: 4846945510829269606}
---- !u!114 &6985186368947305072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6985186368947305074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bae4e4e63053954f9761b7a58bb5531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 100
-  rotateSpeed: 100
-  horizontalInputSystemName: Alt Horizontal
-  verticalInputSystemName: Alt Vertical
-  hitMineSound: {fileID: 3881696836394778797}
-  isCanMove: 1
 --- !u!61 &3755820009111368798
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -237,18 +201,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.87840044, y: 0.45408654}
   m_EdgeRadius: 0
---- !u!114 &4410862961686931200
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6985186368947305074}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88d3c84baf4e183449d86612f18be13c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &7017184885279186735
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -275,6 +227,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.836679, y: 0.417184}
   m_EdgeRadius: 0
+--- !u!114 &4281561784535421999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985186368947305074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0ebc4f637bc5d41bef50b32b3b7c7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombSpawn: {fileID: 1490587991616869815}
+  maxEnergy: 100
+  wasteEnergy: 2
+  bombSetEnergy: 0.1
+  setBombSound: {fileID: 4846945510829269606}
+--- !u!114 &3142492656906716945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985186368947305074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fdd65e4960df3c4ebd040ceb399719d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 100
+  rotateSpeed: 100
+  hitMineSound: {fileID: 3881696836394778797}
+  isCanMove: 1
+--- !u!114 &4410862961686931200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6985186368947305074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d3c84baf4e183449d86612f18be13c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-7745217921363958337
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -156,10 +156,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7948405863342666066}
   - component: {fileID: 7948405863342666064}
-  - component: {fileID: 1378237986785290923}
-  - component: {fileID: 7948405863342666065}
   - component: {fileID: 7536759976198983003}
   - component: {fileID: 7948405864323891053}
+  - component: {fileID: 866961209252156040}
+  - component: {fileID: 2633035976866646421}
   - component: {fileID: 7120636903135538750}
   - component: {fileID: 8762739034895942101}
   - component: {fileID: 2744524957247639193}
@@ -209,42 +209,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &1378237986785290923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7948405863342666067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae217f9ee85099448b1b47561d8495cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bombSpawn: {fileID: 707656781831188442}
-  maxEnergy: 100
-  wasteEnergy: 2
-  bombSetEnergy: 0.1
-  keyCodeBomb: 115
-  setBombSound: {fileID: 2744524957247639193}
---- !u!114 &7948405863342666065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7948405863342666067}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bae4e4e63053954f9761b7a58bb5531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 100
-  rotateSpeed: 100
-  horizontalInputSystemName: Horizontal
-  verticalInputSystemName: Vertical
-  hitMineSound: {fileID: 4401042188178987409}
-  isCanMove: 1
 --- !u!61 &7536759976198983003
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -297,6 +261,39 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8163748, y: 0.46792197}
   m_EdgeRadius: 0
+--- !u!114 &866961209252156040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7948405863342666067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6af59b3fb1427944caffd052bedc1321, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombSpawn: {fileID: 707656781831188442}
+  maxEnergy: 100
+  wasteEnergy: 2
+  bombSetEnergy: 0.1
+  setBombSound: {fileID: 2744524957247639193}
+--- !u!114 &2633035976866646421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7948405863342666067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10eb898bbef3cca4f96baff4048219d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 100
+  rotateSpeed: 100
+  hitMineSound: {fileID: 4401042188178987409}
+  isCanMove: 1
 --- !u!114 &7120636903135538750
 MonoBehaviour:
   m_ObjectHideFlags: 0
